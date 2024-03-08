@@ -1,0 +1,393 @@
+Program.Sub.ScreenSU.Start
+gui.frmEmpReq..create
+gui.frmEmpReq..caption("Employee Request Setup")
+gui.frmEmpReq..size(3810,6555)
+gui.frmEmpReq..minx(0)
+gui.frmEmpReq..miny(0)
+gui.frmEmpReq..position(0,0)
+gui.frmEmpReq..event(unload,fpmusers_unload)
+gui.frmEmpReq..alwaysontop(False)
+gui.frmEmpReq..fontname("Arial")
+gui.frmEmpReq..fontsize(8)
+gui.frmEmpReq..forecolor(0)
+gui.frmEmpReq..fontstyle(,,,,)
+gui.frmEmpReq..BackColor(-2147483633)
+gui.frmEmpReq..controlbox(True)
+gui.frmEmpReq..maxbutton(False)
+gui.frmEmpReq..minbutton(True)
+gui.frmEmpReq..mousepointer(0)
+gui.frmEmpReq..moveable(True)
+gui.frmEmpReq..sizeable(False)
+gui.frmEmpReq..ShowInTaskBar(True)
+gui.frmEmpReq..titlebar(True)
+gui.frmEmpReq.lblUser.create(label,"User",True,1935,255,1,110,110,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblUser.defaultvalue("")
+gui.frmEmpReq.lblUser.controlgroup(0)
+gui.frmEmpReq.ddlUser.create(dropdownlist)
+gui.frmEmpReq.ddlUser.visible(True)
+gui.frmEmpReq.ddlUser.size(1455,330)
+gui.frmEmpReq.ddlUser.zorder(0)
+gui.frmEmpReq.ddlUser.position(85,295)
+gui.frmEmpReq.ddlUser.enabled(True)
+gui.frmEmpReq.ddlUser.fontname("Arial")
+gui.frmEmpReq.ddlUser.fontsize(8)
+gui.frmEmpReq.ddlUser.defaultvalue("")
+gui.frmEmpReq.ddlUser.controlgroup(0)
+gui.frmEmpReq.cmdSave.create(button)
+gui.frmEmpReq.cmdSave.caption("Save")
+gui.frmEmpReq.cmdSave.visible(True)
+gui.frmEmpReq.cmdSave.size(855,375)
+gui.frmEmpReq.cmdSave.zorder(0)
+gui.frmEmpReq.cmdSave.position(1595,265)
+gui.frmEmpReq.cmdSave.enabled(True)
+gui.frmEmpReq.cmdSave.fontname("Arial")
+gui.frmEmpReq.cmdSave.fontsize(8)
+gui.frmEmpReq.cmdSave.event(click,cmdsave_click)
+gui.frmEmpReq.cmdSave.defaultvalue("")
+gui.frmEmpReq.cmdSave.controlgroup(0)
+gui.frmEmpReq.cmdDelete.create(button)
+gui.frmEmpReq.cmdDelete.caption("Delete")
+gui.frmEmpReq.cmdDelete.visible(True)
+gui.frmEmpReq.cmdDelete.size(855,375)
+gui.frmEmpReq.cmdDelete.zorder(0)
+gui.frmEmpReq.cmdDelete.position(2550,250)
+gui.frmEmpReq.cmdDelete.enabled(True)
+gui.frmEmpReq.cmdDelete.fontname("Arial")
+gui.frmEmpReq.cmdDelete.fontsize(8)
+gui.frmEmpReq.cmdDelete.event(click,cmddelete_click)
+gui.frmEmpReq.cmdDelete.defaultvalue("")
+gui.frmEmpReq.cmdDelete.controlgroup(0)
+gui.frmEmpReq.lvwUser.create(listview)
+gui.frmEmpReq.lvwUser.view(3)
+gui.frmEmpReq.lvwUser.addlistviewcolumn("User",2950,0)
+gui.frmEmpReq.lvwUser.visible(True)
+gui.frmEmpReq.lvwUser.size(3400,4205)
+gui.frmEmpReq.lvwUser.zorder(0)
+gui.frmEmpReq.lvwUser.position(100,800)
+gui.frmEmpReq.lvwUser.enabled(True)
+gui.frmEmpReq.lvwUser.fontname("Arial")
+gui.frmEmpReq.lvwUser.fontsize(8)
+gui.frmEmpReq.lvwUser.event(itemclick,lvwuser_itemclick)
+gui.frmEmpReq.lblPriEmlCon.create(label,"Primary Email Contact:",True,1935,255,1,100,5050,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblPriEmlCon.defaultvalue("")
+gui.frmEmpReq.lblPriEmlCon.controlgroup(0)
+gui.frmEmpReq.lblFromUser.create(label,"From User:",True,990,255,1,100,5350,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblFromUser.defaultvalue("")
+gui.frmEmpReq.lblFromUser.controlgroup(0)
+gui.frmEmpReq.lblFromEmail.create(label,"From Email:",True,1230,255,1,1800,5350,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblFromEmail.defaultvalue("")
+gui.frmEmpReq.lblFromEmail.controlgroup(0)
+gui.frmEmpReq.txtFromUser.create(textbox,"",True,1290,300,0,100,5550,True,0,Arial,8,-2147483643,1)
+gui.frmEmpReq.txtFromUser.defaultvalue("")
+gui.frmEmpReq.txtFromUser.controlgroup(0)
+gui.frmEmpReq.txtFromEml.create(textbox,"",True,1710,300,0,1800,5550,True,0,Arial,8,-2147483643,1)
+gui.frmEmpReq.txtFromEml.defaultvalue("")
+gui.frmEmpReq.txtFromEml.controlgroup(0)
+gui.frmEmpReq.cmdUserBrws.create(button)
+gui.frmEmpReq.cmdUserBrws.caption("^")
+gui.frmEmpReq.cmdUserBrws.visible(True)
+gui.frmEmpReq.cmdUserBrws.size(300,300)
+gui.frmEmpReq.cmdUserBrws.zorder(0)
+gui.frmEmpReq.cmdUserBrws.position(1425,5550)
+gui.frmEmpReq.cmdUserBrws.enabled(True)
+gui.frmEmpReq.cmdUserBrws.fontname("Arial")
+gui.frmEmpReq.cmdUserBrws.fontsize(8)
+gui.frmEmpReq.cmdUserBrws.event(click,cmduserbrws_click)
+gui.frmEmpReq.cmdUserBrws.defaultvalue("")
+gui.frmEmpReq.cmdUserBrws.controlgroup(0)
+gui.frmEmpReq.cmdSaveCon.create(button)
+gui.frmEmpReq.cmdSaveCon.caption("Save Contact")
+gui.frmEmpReq.cmdSaveCon.visible(True)
+gui.frmEmpReq.cmdSaveCon.size(1680,270)
+gui.frmEmpReq.cmdSaveCon.zorder(0)
+gui.frmEmpReq.cmdSaveCon.position(1800,5050)
+gui.frmEmpReq.cmdSaveCon.enabled(True)
+gui.frmEmpReq.cmdSaveCon.fontname("Arial")
+gui.frmEmpReq.cmdSaveCon.fontsize(8)
+gui.frmEmpReq.cmdSaveCon.event(click,cmdsavecon_click)
+gui.frmEmpReq.cmdSaveCon.defaultvalue("")
+gui.frmEmpReq.cmdSaveCon.controlgroup(0)
+
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Created by AGV on 3/11/16
+'Create Custom Menu Item for Setup
+'Customer:
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sIcon.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bFileExists.Declare(Boolean)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+
+F.ODBC.Connection!conC.OpenConnection(V.Ambient.ccon,V.Ambient.cuser,V.Ambient.cpass)
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.Control.CallSub(Createtable)
+F.Intrinsic.Control.CallSub(Ddlload)
+F.Intrinsic.Control.CallSub(Listload)
+
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bFileExists)
+F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+	F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,V.Ambient.NewLine,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+		Gui.frmEmpReq.txtFromUser.Text(V.Local.sRet(0))
+		Gui.frmEmpReq.txtFromEml.Text(V.Local.sRet(1))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("{0}\gss.ico",V.Caller.InstallDir,V.Local.sIcon)
+'F.Intrinsic.UI.SetApplicationIcon("frmEmpReq",V.Local.sIcon)
+Gui.frmEmpReq..Show
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+program.sub.fpmusers_unload.start
+F.ODBC.Connection!con.Close
+F.ODBC.Connection!conC.Close
+F.Intrinsic.Control.End
+
+program.sub.fpmusers_unload.End
+
+program.sub.cmdsave_click.start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sUser.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdSave_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sUser.Set(V.Screen.frmEmpReq!ddlUser.Text)
+
+F.Intrinsic.Control.If(V.Local.sUser.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("No user selected!","Error")
+F.Intrinsic.Control.Else
+
+	F.Intrinsic.String.Concat("Select GS_USER from GAB_3639_EMP_REQ_SET where GS_USER = '",V.Local.sUser.Trim,"'",V.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+		F.ODBC.con!rst.AddNew
+		F.ODBC.con!rst.Set!GS_USER(V.Screen.frmEmpReq!ddlUser.Text)
+		F.ODBC.con!rst.Update
+		F.ODBC.con!rst.Close
+		F.Intrinsic.Control.CallSub(Listload)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("User already added!","Error")
+		F.ODBC.con!rst.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdSave_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdsave_click.End
+
+program.sub.cmddelete_click.start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sUser.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdDelete_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sUser.Set(V.Screen.frmEmpReq!ddlUser.Text)
+
+F.Intrinsic.UI.Msgbox("Are you sure you want to delete?","Delete",4,V.Local.iRet)
+F.Intrinsic.Control.If(V.Local.iRet,=,6)
+	F.Intrinsic.String.Concat("DELETE GAB_3639_EMP_REQ_SET where GS_USER = '",V.Local.sUser.Trim,"'",V.Local.sSql)
+	F.ODBC.Connection!con.Execute(V.Local.sSql)
+	F.Intrinsic.Control.CallSub(Listload)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdDelete_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmddelete_click.End
+
+program.sub.lvwuser_itemclick.start
+Gui.frmEmpReq.ddlUser.Text(V.Screen.frmEmpReq!lvwUser.SelectedItemKey)
+
+program.sub.lvwuser_itemclick.End
+
+Program.Sub.ListLoad.Start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("ListLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+Gui.frmEmpReq.lvwUser.ClearItems
+V.Local.sSql.Set("Select GS_USER from GAB_3639_EMP_REQ_SET;")
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+	Gui.frmEmpReq.lvwUser.AddListItem(V.ODBC.con!rst.FieldVal!GS_USER,V.ODBC.con!rst.FieldVal!GS_USER)
+	F.ODBC.con!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ListLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ListLoad.End
+
+Program.Sub.DDLLoad.Start
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.i.Declare(Long)
+
+F.Intrinsic.Control.SetErrorHandler("DDLLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sSql.Set("Select GS_USER from USER_INFORMATION order by GS_USER")
+F.ODBC.Connection!conC.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.DoUntil(V.ODBC.conC!rst.EOF,=,True)
+	Gui.frmEmpReq.ddlUser.AddItem(V.ODBC.conC!rst.FieldVal!GS_USER,V.Local.i)
+	F.Intrinsic.Math.Add(V.Local.i,1,V.Local.i)
+	F.ODBC.conC!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conC!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("DDLLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.DDLLoad.End
+
+program.sub.cmduserbrws_click.start
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.sEmail.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sA.Declare(String)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdUserBrws_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+V.Local.sUser.Set(V.Local.sRet(1))
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+
+F.Intrinsic.String.Build("SELECT EMAIL FROM USER_INFORMATION WHERE USER_ID = '{0}';",V.Local.sRet(0),V.Local.sSQL)
+F.ODBC.Connection!conc.ExecuteAndReturn(V.Local.sSQL,V.Local.sEmail)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	Gui.frmEmpReq.txtFromUser.Text(V.Local.sUser)
+	Gui.frmEmpReq.txtFromEml.Text(V.Local.sEmail)
+
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sUser,V.Ambient.NewLine,V.Local.sEmail,V.Local.sA)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sA)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdUserBrws_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+
+
+program.sub.cmduserbrws_click.End
+
+program.sub.cmdsavecon_click.start
+V.Local.sSQL.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.sEmail.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sA.Declare(String)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdSaveCon_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sUser.Set(V.Screen.frmEmpReq!txtFromUser.Text)
+V.Local.sEmail.Set(V.Screen.frmEmpReq!txtFromEml.Text)
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+
+F.Intrinsic.Control.If(V.Local.sUser,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter in a From User.","From User")
+F.Intrinsic.Control.ElseIf(V.Local.sEmail,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter in a From Email.","From Email")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sUser,V.Ambient.NewLine,V.Local.sEmail,V.Local.sA)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sA)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdSaveCon_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdsavecon_click.End
+
+Program.Sub.CreateTable.Start
+V.Local.sSQL.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("CreateTable_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.ODBC.Connection!con.TableExists("GAB_3639_EMP_REQ_SET",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.ODBC.Connection!con.Execute("CREATE TABLE GAB_3639_EMP_REQ_SET(GS_USER CHAR(8));")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("CreateTable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.CreateTable.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
