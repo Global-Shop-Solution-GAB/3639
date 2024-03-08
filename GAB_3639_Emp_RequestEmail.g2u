@@ -1,0 +1,451 @@
+﻿Program.Sub.ScreenSU.Start
+gui.frmEmpReq..create
+gui.frmEmpReq..caption("Employee Request")
+gui.frmEmpReq..size(9600,6540)
+gui.frmEmpReq..minx(0)
+gui.frmEmpReq..miny(0)
+gui.frmEmpReq..position(0,0)
+gui.frmEmpReq..event(unload,Unload)
+gui.frmEmpReq..alwaysontop(False)
+gui.frmEmpReq..fontname("Arial")
+gui.frmEmpReq..fontsize(8)
+gui.frmEmpReq..forecolor(0)
+gui.frmEmpReq..fontstyle(False,False,False,False,)
+gui.frmEmpReq..BackColor(-2147483633)
+gui.frmEmpReq..controlbox(True)
+gui.frmEmpReq..maxbutton(False)
+gui.frmEmpReq..minbutton(False)
+gui.frmEmpReq..mousepointer(0)
+gui.frmEmpReq..moveable(True)
+gui.frmEmpReq..sizeable(False)
+gui.frmEmpReq..ShowInTaskBar(True)
+gui.frmEmpReq..titlebar(True)
+gui.frmEmpReq.ddlType.create(dropdownlist)
+gui.frmEmpReq.ddlType.visible(True)
+gui.frmEmpReq.ddlType.size(2100,330)
+gui.frmEmpReq.ddlType.zorder(0)
+gui.frmEmpReq.ddlType.position(110,335)
+gui.frmEmpReq.ddlType.enabled(True)
+gui.frmEmpReq.ddlType.fontname("Arial")
+gui.frmEmpReq.ddlType.fontsize(8)
+gui.frmEmpReq.ddlType.defaultvalue("")
+gui.frmEmpReq.ddlType.controlgroup(0)
+gui.frmEmpReq.mltxt1.create(textboxm)
+gui.frmEmpReq.mltxt1.text("")
+gui.frmEmpReq.mltxt1.visible(True)
+gui.frmEmpReq.mltxt1.size(9165,4410)
+gui.frmEmpReq.mltxt1.zorder(0)
+gui.frmEmpReq.mltxt1.position(100,985)
+gui.frmEmpReq.mltxt1.enabled(True)
+gui.frmEmpReq.mltxt1.alignment(0)
+gui.frmEmpReq.mltxt1.fontname("Arial")
+gui.frmEmpReq.mltxt1.fontsize(8)
+gui.frmEmpReq.mltxt1.BackColor(-2147483643)
+gui.frmEmpReq.mltxt1.defaultvalue("")
+gui.frmEmpReq.mltxt1.controlgroup(0)
+gui.frmEmpReq.cmdSave.create(button)
+gui.frmEmpReq.cmdSave.caption("Save")
+gui.frmEmpReq.cmdSave.visible(True)
+gui.frmEmpReq.cmdSave.size(855,375)
+gui.frmEmpReq.cmdSave.zorder(0)
+gui.frmEmpReq.cmdSave.position(115,5540)
+gui.frmEmpReq.cmdSave.enabled(True)
+gui.frmEmpReq.cmdSave.fontname("Arial")
+gui.frmEmpReq.cmdSave.fontsize(8)
+gui.frmEmpReq.cmdSave.event(click,cmdsave_click)
+gui.frmEmpReq.cmdSave.defaultvalue("")
+gui.frmEmpReq.cmdSave.controlgroup(0)
+gui.frmEmpReq.lblReason.create(label,"Reason",True,1935,255,1,110,110,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblReason.defaultvalue("")
+gui.frmEmpReq.lblReason.controlgroup(0)
+gui.frmEmpReq.lblReq.create(label,"Request:",True,1935,255,1,110,770,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblReq.defaultvalue("")
+gui.frmEmpReq.lblReq.controlgroup(0)
+gui.frmEmpReq.lblWC2.create(label,"",True,825,255,1,2800,335,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblWC2.defaultvalue("")
+gui.frmEmpReq.lblWC2.controlgroup(0)
+gui.frmEmpReq.lblDesc2.create(label,"",True,1890,255,1,4200,335,True,0,Arial,8,-2147483633,0)
+gui.frmEmpReq.lblDesc2.defaultvalue("")
+gui.frmEmpReq.lblDesc2.controlgroup(0)
+gui.frmEmpReq.ddlType.tabstop(True)
+gui.frmEmpReq.ddlType.tabindex(1)
+gui.frmEmpReq.mltxt1.tabstop(True)
+gui.frmEmpReq.mltxt1.tabindex(2)
+gui.frmEmpReq.cmdSave.tabstop(True)
+gui.frmEmpReq.cmdSave.tabindex(3)
+
+
+gui.fPriCon..create
+gui.fPriCon..caption("Primary Email Setup")
+gui.fPriCon..size(4100,2415)
+gui.fPriCon..minx(0)
+gui.fPriCon..miny(0)
+gui.fPriCon..position(0,0)
+gui.fPriCon..event(unload,Unload)
+gui.fPriCon..alwaysontop(False)
+gui.fPriCon..fontname("Arial")
+gui.fPriCon..fontsize(8)
+gui.fPriCon..forecolor(0)
+gui.fPriCon..fontstyle(,,,,)
+gui.fPriCon..BackColor(-2147483633)
+gui.fPriCon..controlbox(True)
+gui.fPriCon..maxbutton(True)
+gui.fPriCon..minbutton(True)
+gui.fPriCon..mousepointer(0)
+gui.fPriCon..moveable(True)
+gui.fPriCon..sizeable(True)
+gui.fPriCon..ShowInTaskBar(True)
+gui.fPriCon..titlebar(True)
+gui.fPriCon.lblTitle.create(label,"Please Enter in a Primary Email Contact:",True,2925,255,1,300,100,True,0,Arial,8,-2147483633,0)
+gui.fPriCon.lblTitle.defaultvalue("")
+gui.fPriCon.lblTitle.controlgroup(0)
+gui.fPriCon.lblFromEml.create(label,"From Email:",True,1935,255,1,2000,500,True,0,Arial,8,-2147483633,0)
+gui.fPriCon.lblFromEml.defaultvalue("")
+gui.fPriCon.lblFromEml.controlgroup(0)
+gui.fPriCon.lblFromUser.create(label,"From User:",True,1215,255,1,200,500,True,0,Arial,8,-2147483633,0)
+gui.fPriCon.lblFromUser.defaultvalue("")
+gui.fPriCon.lblFromUser.controlgroup(0)
+gui.fPriCon.txtFromEml.create(textbox,"",True,1750,300,0,2000,700,True,0,Arial,8,-2147483643,1)
+gui.fPriCon.txtFromEml.defaultvalue("")
+gui.fPriCon.txtFromEml.controlgroup(0)
+gui.fPriCon.txtFromUser.create(textbox,"",True,1290,300,0,200,700,True,0,Arial,8,-2147483643,1)
+gui.fPriCon.txtFromUser.defaultvalue("")
+gui.fPriCon.txtFromUser.controlgroup(0)
+gui.fPriCon.cmdUserBrws.create(button)
+gui.fPriCon.cmdUserBrws.caption("^")
+gui.fPriCon.cmdUserBrws.visible(True)
+gui.fPriCon.cmdUserBrws.size(300,300)
+gui.fPriCon.cmdUserBrws.zorder(0)
+gui.fPriCon.cmdUserBrws.position(1550,700)
+gui.fPriCon.cmdUserBrws.enabled(True)
+gui.fPriCon.cmdUserBrws.fontname("Arial")
+gui.fPriCon.cmdUserBrws.fontsize(8)
+gui.fPriCon.cmdUserBrws.event(click,cmduserbrws_click)
+gui.fPriCon.cmdUserBrws.defaultvalue("")
+gui.fPriCon.cmdUserBrws.controlgroup(0)
+gui.fPriCon.cmdSaveCon.create(button)
+gui.fPriCon.cmdSaveCon.caption("Save Contact")
+gui.fPriCon.cmdSaveCon.visible(True)
+gui.fPriCon.cmdSaveCon.size(1710,375)
+gui.fPriCon.cmdSaveCon.zorder(0)
+gui.fPriCon.cmdSaveCon.position(1000,1200)
+gui.fPriCon.cmdSaveCon.enabled(True)
+gui.fPriCon.cmdSaveCon.fontname("Arial")
+gui.fPriCon.cmdSaveCon.fontsize(8)
+gui.fPriCon.cmdSaveCon.event(click,cmdsavecon_click)
+gui.fPriCon.cmdSaveCon.defaultvalue("")
+gui.fPriCon.cmdSaveCon.controlgroup(0)
+gui.fPriCon.txtFromUser.tabstop(True)
+gui.fPriCon.txtFromUser.tabindex(1)
+gui.fPriCon.cmdUserBrws.tabstop(True)
+gui.fPriCon.cmdUserBrws.tabindex(2)
+gui.fPriCon.txtFromEml.tabstop(True)
+gui.fPriCon.txtFromEml.tabindex(3)
+gui.fPriCon.cmdSaveCon.tabstop(True)
+gui.fPriCon.cmdSaveCon.tabindex(4)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Created by AGV on 3/11/16
+'Hooks: 15710 (Populate GUI) & 15780 (Script 3 Button on Main GUI Screen)
+'Customer:
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Global.sIcon.Declare(String)
+V.Global.sFromEmail.Declare(String)
+V.Global.sFromUser.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	'GUI Populate Hook
+	F.Intrinsic.Control.Case(15710)
+		V.Passed.000021.Set("Emp Reqst")
+		
+	'GUI Script 3 Hook
+	F.Intrinsic.Control.Case(15780)
+		F.Intrinsic.Control.If(V.Passed.009993,=,"")
+			F.Intrinsic.UI.Msgbox("Please select an Active Employee first.","Employee Validation")
+			F.Intrinsic.Control.End
+	
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}\gss.ico",V.Caller.InstallDir,V.Global.sIcon)
+	
+'			F.ODBC.Connection!conC.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+'			F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+			F.ODBC.Connection!conC.OpenCommonConnection
+			F.ODBC.Connection!con.OpenCompanyConnection
+	
+			F.Intrinsic.Control.CallSub(Formload)
+		F.Intrinsic.Control.EndIf
+		
+	'SFDC.Net Populate
+	F.Intrinsic.Control.Case(49710)
+		F.Intrinsic.String.Replace(V.Passed.MainFormView-windowsUIButtonPanel-1,"Script 3","Emp Reqst",V.Passed.MainFormView-windowsUIButtonPanel-1)
+		
+	'SFDC.Net Script 3
+	F.Intrinsic.Control.Case(49762)
+		F.Intrinsic.Control.If(V.Passed.Employee,=,"")
+			F.Intrinsic.UI.Msgbox("Please select an Active Employee first.","Employee Validation")
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}\gss.ico",V.Caller.InstallDir,V.Global.sIcon)
+	
+			F.ODBC.Connection!conC.OpenCommonConnection
+			F.ODBC.Connection!con.OpenCompanyConnection
+	
+			F.Intrinsic.Control.CallSub(Formload)
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	F.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.ODBC.Connection!con.Close
+F.ODBC.Connection!conC.Close
+F.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+program.sub.cmdsave_click.start
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bFileExists.Declare(Boolean)
+
+F.Intrinsic.Control.SetErrorHandler("cmdSave_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bFileExists)
+F.Intrinsic.Control.If(V.Local.bFileExists,=,True)
+	F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,V.Ambient.NewLine,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet(0),<>,"")
+		F.Intrinsic.Control.If(V.Local.sRet(1),=,"")
+'			F.Intrinsic.UI.SetApplicationIcon("fPriCon",V.Global.sIcon)
+			Gui.fPriCon..Show
+		F.Intrinsic.Control.Else
+			V.Global.sFromUser.Set(V.Local.sRet(0))
+			V.Global.sFromEmail.Set(V.Local.sRet(1))
+			F.Intrinsic.Control.If(V.Caller.Hook,=,15780)
+				F.Intrinsic.Control.CallSub(Sendemail)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Control.CallSub(Sendemail_SFDC)
+			F.Intrinsic.Control.EndIf			
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+'		F.Intrinsic.UI.SetApplicationIcon("fPriCon",V.Global.sIcon)
+		Gui.fPriCon..Show
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+'	F.Intrinsic.UI.SetApplicationIcon("fPriCon",V.Global.sIcon)
+	Gui.fPriCon..Show
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdSave_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdsave_click.End
+
+Program.Sub.FormLoad.Start
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("FormLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+'F.Intrinsic.UI.SetApplicationIcon("frmEmpReq",V.Global.sIcon)
+Gui.frmEmpReq..Show
+Gui.frmEmpReq.ddlType.AddItem("Early Leave",0)
+Gui.frmEmpReq.ddlType.AddItem("Time Off",1)
+Gui.frmEmpReq.ddlType.AddItem("Other",1)
+Gui.frmEmpReq.ddlType.Text("Early Leave")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("FormLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.FormLoad.End
+
+program.sub.cmdsavecon_click.start
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sA.Declare(String)
+V.Local.sFile.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdSaveCon_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Global.sFromUser.Set(V.Screen.fPriCon!txtFromUser.Text)
+V.Global.sFromEmail.Set(V.Screen.fPriCon!txtFromEml.Text)
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+
+F.Intrinsic.Control.If(V.Global.sFromUser,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter in a From User.","From User")
+F.Intrinsic.Control.ElseIf(V.Global.sFromEmail,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter in a From Email.","From Email")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Global.sFromUser,V.Ambient.NewLine,V.Global.sFromEmail,V.Local.sA)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sA)
+	F.Intrinsic.Control.CallSub(Sendemail)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdSaveCon_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsavecon_click.End
+
+program.sub.cmduserbrws_click.start
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.sEmail.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sA.Declare(String)
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("cmdUserBrws_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+V.Local.sUser.Set(V.Local.sRet(1))
+
+F.Intrinsic.String.Build("{0}\GAB\GAS\GAB_3639_Emp_RequestEmail_Contact.txt",V.Caller.PluginsDir,V.Local.sFile)
+
+F.Intrinsic.String.Build("SELECT EMAIL FROM USER_INFORMATION WHERE USER_ID = '{0}';",V.Local.sRet(0),V.Local.sSQL)
+F.ODBC.Connection!conc.ExecuteAndReturn(V.Local.sSQL,V.Local.sEmail)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	Gui.fPriCon.txtFromUser.Text(V.Local.sUser)
+	Gui.fPriCon.txtFromEml.Text(V.Local.sEmail)
+
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sUser,V.Ambient.NewLine,V.Local.sEmail,V.Local.sA)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sA)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdUserBrws_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmduserbrws_click.End
+
+Program.Sub.SendEmail.Start
+V.Local.sError.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sMessage2.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sToEmail.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.iID.Declare(Long)
+V.Local.sRecipient.Declare(String)
+V.Local.sSender.Declare(String)
+
+F.Intrinsic.String.Build("Employee ID: {0}{1}",V.Passed.009993,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Employee Name: {1}{2}",V.Local.sMessage,V.Passed.009994,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Reason: {1}{2}",V.Local.sMessage,V.Screen.frmEmpReq!ddlType.Text,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Request: {1}{2}",V.Local.sMessage,V.Screen.frmEmpReq!mltxt1.Text,V.Ambient.NewLine,V.Local.sMessage)
+
+V.Local.sSql.Set("Select GS_USER from GAB_3639_EMP_REQ_SET")
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+	F.Global.Security.GetUserEmail(V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Caller.CompanyCode,V.Local.sToEmail)
+	F.Intrinsic.Control.If(V.Local.sToEmail,=,"")
+		F.Intrinsic.String.Build("User, {0}, does not have an email address setup. Please setup the user email under System Support > File > User Security Maintenance.",V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Local.sMessage2)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage2,"Email Validation")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Employee Request from SDFC Timeclock: {0})",V.Passed.009994,V.Local.sSubject)
+		
+		'1/3/2022 Converted from CreateEMMessage to QueueMessage (PG)
+		'F.Global.Messaging.CreateEMMessage(V.Local.sToEmail,V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Global.sFromEmail,V.Global.sFromUser,V.Local.sSubject,V.Local.sMessage,"",True)
+		F.Global.Security.GetuserID(V.Caller.User,V.Caller.CompanyCode,V.Local.iID)
+		F.Intrinsic.String.Build("{0}*!*{1}",V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Local.sToEmail,V.Local.sRecipient)
+		F.Intrinsic.String.Build("{0}*!*{1}",V.Global.sFromEmail,V.Global.sFromUser,V.Local.sSender)
+		F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iID,"GAB_3639_Emp_RequestEmail",V.Local.sSubject,V.Local.sSender,V.Local.sRecipient,V.Local.sMessage,5,,False,,,,,,,,,False)
+
+	F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+F.Intrinsic.Control.CallSub(Unload)
+
+Program.Sub.SendEmail.End
+
+Program.Sub.Sendemail_SFDC.Start
+V.Local.sError.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sMessage2.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sToEmail.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.iID.Declare(Long)
+V.Local.sRecipient.Declare(String)
+V.Local.sSender.Declare(String)
+
+F.Intrinsic.String.Build("Employee ID: {0}{1}",V.Passed.Employee,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Employee Name: {1}{2}",V.Local.sMessage,V.Passed.EmployeeName,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Reason: {1}{2}",V.Local.sMessage,V.Screen.frmEmpReq!ddlType.Text,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Build("{0}Request: {1}{2}",V.Local.sMessage,V.Screen.frmEmpReq!mltxt1.Text,V.Ambient.NewLine,V.Local.sMessage)
+
+V.Local.sSql.Set("Select GS_USER from GAB_3639_EMP_REQ_SET")
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+	F.Global.Security.GetUserEmail(V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Caller.CompanyCode,V.Local.sToEmail)
+	F.Intrinsic.Control.If(V.Local.sToEmail,=,"")
+		F.Intrinsic.String.Build("User, {0}, does not have an email address setup. Please setup the user email under System Support > File > User Security Maintenance.",V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Local.sMessage2)
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage2,"Email Validation")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Employee Request from SDFC Timeclock: {0})",V.Passed.EmployeeName,V.Local.sSubject)
+		
+		'1/3/2022 Converted from CreateEMMessage to QueueMessage (PG)
+		'F.Global.Messaging.CreateEMMessage(V.Local.sToEmail,V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Global.sFromEmail,V.Global.sFromUser,V.Local.sSubject,V.Local.sMessage,"",True)
+		F.Global.Security.GetuserID(V.Caller.User,V.Caller.CompanyCode,V.Local.iID)
+		F.Intrinsic.String.Build("{0}*!*{1}",V.ODBC.con!rst.FieldValRTrim!GS_USER,V.Local.sToEmail,V.Local.sRecipient)
+		F.Intrinsic.String.Build("{0}*!*{1}",V.Global.sFromEmail,V.Global.sFromUser,V.Local.sSender)
+		F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iID,"GAB_3639_Emp_RequestEmail",V.Local.sSubject,V.Local.sSender,V.Local.sRecipient,V.Local.sMessage,5,,False,,,,,,,,,False)
+
+	F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+F.Intrinsic.Control.CallSub(Unload)
+Program.Sub.Sendemail_SFDC.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+${$5$}$2.0.0.0$}$2
+${$6$}$triley$}$20230315151625923$}$iK6nerqp9nur1h1iSBfRKBBz1ENCgYv6KbLy16TXVQ3C3Qw/+Ud6L+i1A6PDymqY/+mESUq3TN4=
+Program.Sub.Comments.End
